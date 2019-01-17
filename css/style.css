@@ -1,0 +1,311 @@
+/*
+font-family: 'Open Sans', sans-serif; == Kopjes en navbar.
+font-family: 'Roboto Condensed', sans-serif; == Normal text.
+*/
+
+/*- Hieronder zit de desktop versie -*/
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: whitesmoke;
+}
+.header {
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif;
+}
+.header#challengeText1, h1 {
+    padding-left: 50px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-weight: bold;
+}
+.header#challengeText2, h4 {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin: 0;
+    color: gray;
+}
+.nav {
+    border-top: 1px solid gray;
+    text-align: center;
+    height: 70px;
+}
+.menu {
+    background-color: white;
+    margin: 0;
+}
+.menu a {
+    font-family: 'Roboto Condensed', sans-serif;
+    border-right: 1px solid gray;
+    padding: 10px;
+    text-decoration: none;
+    color: gray;
+    line-height: 70px;
+    margin: 0;
+    transition: color 1s;
+}
+.menu a:hover {
+    color: red;
+    transition: color 1s;
+}
+a.active {
+    color: red;
+}
+label {
+    color: white;
+    margin: 0;
+    padding: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+}
+#toggle {
+    display: none;
+}
+.container {
+    flex-direction: column;
+    display: flex;
+    padding-top: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.container div {
+    background-color: white;
+}
+.box1 {
+    flex: 1;
+    order: 1;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.box1 h3 {
+    font-size: 26px;
+}
+.box1 p {
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+.box1 a {
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid red;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 1s, color 1s;
+}
+.box1 a:hover {
+    background-color: white;
+    color: red;
+    transition: background-color 1s, color 1s;
+}
+.container2 {
+    flex-direction: column;
+    display: flex;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 20px;
+}
+.container2 div {
+    background-color: white;
+}
+.footer {
+    flex: 1;
+    order: 2;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.footer h5 {
+    margin: 0;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid red;
+}
+.footer a {
+    color: gray;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+    transition: color 1s;
+}
+.footer a:hover {
+    color: red;
+    transition: color 1s;
+}
+
+/*- Begin van mobile version te zien aan de media query -*/
+@media only screen and (max-width: 768px) {
+    html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background-color: whitesmoke;
+    }
+    a.active {
+        color: red;
+    }
+    .header {
+        padding-top: 10px;
+        padding-bottom: 60px;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .header#challengeText1, h1 {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        font-weight: bold;
+    }
+    .header#challengeText2, h4 {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin: 0;
+        color: gray;
+    }
+    label {
+        display: block;
+        cursor: pointer;
+        border-bottom: 1px solid red;
+    }
+    .menu {
+        text-align: left;
+        width: 100%;
+        display: none;
+        background-color: #373737;
+    }
+    .nav {
+        text-align: right;
+        background-color: #373737;
+    }
+    .menu a {
+        padding: 0 0 0 10px;
+        display: block;
+        border-right: none;
+        font-size: 12px;
+        border-bottom: 1px solid gray;
+        margin: 0;
+        transition: color 1s;
+    }
+    .menu a:hover {
+        color: red;
+        transition: color 1s;
+    }
+    #toggle:checked + .menu {
+        display: block;
+        position: absolute;
+    }
+    .container {
+        display: flex;
+        padding-top: 20px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    .container div {
+        background-color: white;
+    }
+    .box1 {
+        padding-bottom: 50px;
+        padding-left: 10px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    .box1 h3 {
+        font-size: 26px;
+    }
+    .box1 p {
+        padding-bottom: 20px;
+      font-size: 14px;
+    }
+    .box1 a {
+        font-weight: bold;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid red;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        transition: background-color 1s, color 1s;
+    }
+    .box1 a:hover {
+        background-color: white;
+        color: red;
+        transition: background-color 1s, color 1s;
+    }
+    .container2 {
+        display: flex;
+        font-family: 'Roboto Condensed', sans-serif;
+        padding-top: 20px;
+    }
+    .container2 div {
+        background-color: white;
+    }
+    .footer {
+        width: 100%;
+        padding-bottom: 50px;
+        padding-left: 10px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    .footer h5 {
+        margin: 0;
+        padding: 10px 0 10px 0;
+        border-bottom: 1px solid red;
+    }
+    .footer a {
+        color: gray;
+        text-decoration: none;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        border-bottom: 1px solid gray;
+        transition: color 1s;
+    }
+    .footer a:hover {
+        color: red;
+        transition: color 1s;
+    }
+    .imageResponsive {
+        display: flex;
+        width: 100%;
+        height: auto;
+    }
+    .imageResponsive, img {
+        display: flex;
+        padding: 10px;
+    }
+    .imageResponsive, p {
+        text-align: center;
+    }
+    .nextButtons a {
+        font-weight: bold;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid red;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        transition: background-color 1s, color 1s;
+    }
+    .nextButtons a:hover {
+        background-color: white;
+        color: red;
+        transition: background-color 1s, color 1s;
+    }
+}
