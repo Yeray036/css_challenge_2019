@@ -10,6 +10,9 @@ html, body {
     margin: 0;
     background-color: whitesmoke;
 }
+h5#lenteBerichtenKop {
+    color: red;
+}
 .header {
     background-color: white;
     padding-top: 50px;
@@ -144,6 +147,23 @@ label {
 .footer a:hover {
     color: red;
     transition: color 1s;
+}
+.buttons {
+    display: flex;
+    width: 100%;
+}
+.nextButtons {
+    display: flex;
+    flex: 1;
+    order: 1;
+}
+a.nextButtons2 {
+    text-align: right;
+}
+.nextButtons2 {
+    display: flex;
+    flex: 1;
+    order: 2;
 }
 
 /*- Begin van mobile version te zien aan de media query -*/
@@ -307,5 +327,41 @@ label {
         background-color: white;
         color: red;
         transition: background-color 1s, color 1s;
+    }
+    .nextButtons2 a {
+        align-content: flex-end;
+        font-weight: bold;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid red;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        transition: background-color 1s, color 1s;
+    }
+    .nextButtons2 a:hover {
+        background-color: white;
+        color: red;
+        transition: background-color 1s, color 1s;
+    }
+    h5#lenteBerichtenKop{
+        color: red;
+    }
+    .buttons {
+        display: flex;
+        width: 100%;
+    }
+    .nextButtons {
+        width: 25%;
+        display: flex;
+        flex: 1;
+        order: 1;
+    }
+    .nextButtons2 {
+        width: 25%;
+        flex: 1;
+        order: 2;
+        display: flex;
     }
 }
